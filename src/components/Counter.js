@@ -5,7 +5,7 @@ import "../styles/Counter.css"
 function Counter(props) {
 
     const [value, setValue] = useState((props.initialValue == "") ? 1 : +props.initialValue);
-    const maxValue = (props.maxValue === "") ? 1000 : +props.maxValue;
+    const maxValue = (props.maxValue === "") ? 1000 : (+props.maxValue < 1)? 1: +props.maxValue;
 
     function handleIncrement() {
         if (value < maxValue) {
