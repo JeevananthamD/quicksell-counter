@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../styles/Counter.css"
 
 
@@ -8,29 +8,25 @@ function Counter(props) {
     const maxValue = (props.maxValue === "") ? 1000 : (+props.maxValue < 1)? 1: +props.maxValue;
 
     function handleIncrement() {
-        if (value < maxValue) {
-            setValue(prev => prev + 1);
-        }
+        setValue(prev => prev + 1);
     }
 
     function handleDecrement() {
-        if (value > 0) {
-            setValue(prev => prev - 1);
-        }
+        setValue(prev => prev - 1);
     }
 
     function handleChange(e) {
-        let num = +e.target.value;
-        if (num <= maxValue && num >= 0) {
-            setValue(num);
-        }
-        else if (num > maxValue) {
+        setValue(+e.target.value);
+    }
+
+    useEffect(() => {
+        if (value > maxValue) {
             setValue(maxValue);
         }
-        else {
+        else if (value < 0) {
             setValue(0);
         }
-    }
+    },[value])
 
     return (
         <div className="counter_container">
