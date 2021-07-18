@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/quicksell-counter/static/css/main.49d03d88.chunk.css",
-    "main.js": "/quicksell-counter/static/js/main.48c01712.chunk.js",
-    "main.js.map": "/quicksell-counter/static/js/main.48c01712.chunk.js.map",
+    "main.js": "/quicksell-counter/static/js/main.309cf678.chunk.js",
+    "main.js.map": "/quicksell-counter/static/js/main.309cf678.chunk.js.map",
     "runtime-main.js": "/quicksell-counter/static/js/runtime-main.bfa7f893.js",
     "runtime-main.js.map": "/quicksell-counter/static/js/runtime-main.bfa7f893.js.map",
     "static/js/2.01607e7f.chunk.js": "/quicksell-counter/static/js/2.01607e7f.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bfa7f893.js",
     "static/js/2.01607e7f.chunk.js",
     "static/css/main.49d03d88.chunk.css",
-    "static/js/main.48c01712.chunk.js"
+    "static/js/main.309cf678.chunk.js"
   ]
 }
