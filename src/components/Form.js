@@ -7,7 +7,6 @@ import {
     handleSubmit,
     handleInitialValue,
     handleMaxValue,
-    getUrl,
     putUrl
 } from "./redux/constant"
 
@@ -22,11 +21,11 @@ function Form() {
     const dispatch = useDispatch();
 
     function getInitialValue(e) {
-        dispatch(actionGenerator(handleInitialValue, e.target.value));
+        dispatch(actionGenerator(handleInitialValue, +e.target.value));
     }
 
     function getMaxValue(e) {
-        dispatch(actionGenerator(handleMaxValue, e.target.value));
+        dispatch(actionGenerator(handleMaxValue, +e.target.value));
     }
 
     async function submit(e) {
