@@ -26,7 +26,7 @@ function reducer(state = initialState, action = {}) {
         case handleSubmit:
             return {
                 ...state, isSubmited: action.payload,
-                maxValue: (state.maxValue == "") ? 1000 : (state.maxValue < 1) ? 1 : state.maxValue
+                maxValue: (!state.maxValue) ? 1000 : (state.maxValue < 1) ? 1 : state.maxValue
             }
         case handleIncrement:
             return { ...state, value: state.value + 1 };
