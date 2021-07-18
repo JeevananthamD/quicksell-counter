@@ -65,7 +65,6 @@ function Counter(props) {
                 else if (value !== "") {
                     let res = await axios.get(getUrl);
                     if (value !== res.data) {
-                        console.log(value);
                         saving(true);
                         await axios.put(putUrl, { counter: value });
                         saving(false);
